@@ -1,0 +1,31 @@
+Grade: 48.00/50.00
+
+1 Deduction(s):
+
+--------------
+#1: 2.00 points
+Failing test: test_name_fsa2: 
+        @points=2
+        Test the name FSA.
+        Ensure that middle name like "Maggie" is allowed.
+        Ensure that invalid middle names like "XXXXX" are not allowed.
+        
+Traceback (most recent call last):
+  File "../assignments-sol/a1/a1_test.py", line 79, in test_name_fsa2
+    self.assertFalse(run_fsa(states, initial_state, accept_states, transition, ['Flo', 'XXXXX', 'Lewis']))
+AssertionError: True is not false
+
+source:
+    def test_name_fsa2(self):
+         """
+         @points=2
+         Test the name FSA.
+         Ensure that middle name like "Maggie" is allowed.
+         Ensure that invalid middle names like "XXXXX" are not allowed.
+         """
+         states, initial_state, accept_states, transition = get_name_fsa()
+         self.assertTrue(run_fsa(states, initial_state, accept_states, transition, ['Ms.', 'Flo', 'Maggie', 'Lewis']))
+         self.assertFalse(run_fsa(states, initial_state, accept_states, transition, ['Flo', 'Maggie']))
+         self.assertFalse(run_fsa(states, initial_state, accept_states, transition, ['Flo', 'XXXXX', 'Lewis']))
+--------------
+

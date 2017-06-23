@@ -1,0 +1,54 @@
+training data shape: (27867, 18440)
+
+testing data shape: (28033, 18440)
+
+confusion matrix:
+        I-LOC  I-MISC  I-ORG   I-PER        O
+I-LOC   862.0    22.0   80.0   108.0     78.0
+I-MISC   50.0   360.0   51.0    37.0     71.0
+I-ORG   171.0    27.0  463.0   213.0    141.0
+I-PER    61.0     9.0   44.0  1369.0     73.0
+O        44.0    22.0   44.0    76.0  23557.0
+
+evaluation matrix:
+              I-LOC    I-MISC     I-ORG     I-PER         O
+precision  0.725589  0.818182  0.678886  0.759290  0.984824
+recall     0.749565  0.632689  0.456158  0.879820  0.992166
+f1         0.737382  0.713578  0.545669  0.815124  0.988482
+
+average f1s: 0.702938
+
+combination results:
+          f1  n_params   caps    pos  chunk context    w2v
+4   0.705430     91975   True   True  False    True   True
+0   0.702938     92200   True   True   True    True   True
+5   0.693375     91225   True   True  False    True  False
+1   0.693336     91450   True   True   True    True  False
+12  0.683717     91315   True  False  False    True   True
+9   0.678049     90790   True  False   True    True  False
+8   0.677478     91540   True  False   True    True   True
+13  0.674556     90565   True  False  False    True  False
+16  0.661552     92185  False   True   True    True   True
+20  0.659644     91960  False   True  False    True   True
+21  0.639389     91210  False   True  False    True  False
+15  0.637879     30920   True  False  False   False  False
+17  0.637036     91435  False   True   True    True  False
+11  0.635057     30995   True  False   True   False  False
+2   0.630859     31465   True   True   True   False   True
+6   0.630282     31390   True   True  False   False   True
+14  0.627573     31170   True  False  False   False   True
+10  0.611996     31245   True  False   True   False   True
+3   0.605595     31215   True   True   True   False  False
+7   0.604079     31140   True   True  False   False  False
+18  0.592576     31460  False   True   True   False   True
+22  0.588128     31385  False   True  False   False   True
+24  0.579251     91525  False  False   True    True   True
+28  0.571455     91300  False  False  False    True   True
+19  0.562795     31210  False   True   True   False  False
+23  0.558451     31135  False   True  False   False  False
+25  0.503161     90775  False  False   True    True  False
+29  0.467512     90550  False  False  False    True  False
+26  0.448104     31240  False  False   True   False   True
+30  0.439328     31165  False  False  False   False   True
+27  0.367361     30990  False  False   True   False  False
+31  0.330491     30915  False  False  False   False  False
